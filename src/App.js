@@ -1,33 +1,30 @@
-import React, { useState } from "react";
-import montagne from "./montagne.avif"
-import nypoVec from './nypoVec.png';
-
+import React from "react";
+import montagne from "./assets/montagne.avif";
+import nypoVec from './assets/nypoVec.png';
+import MainContainer from './components/MainContainer';
+import { useAppState } from './hooks/useAppState';
 
 const App = () => {  
-  const [fadeOut, setFadeOut] = useState(false);
+  const { siteOpen, handleOpenSite } = useAppState();
 
-  const handleClick = () => {
-    setFadeOut(true);
+  const backgroundImage = {
+    src: montagne,
+    alt: "montagne plein écran"
   };
 
+  const buttonImage = {
+    src: nypoVec,
+    alt: "nypo"
+  };
 
   return (
-    // image de départ avec le bouton "nypo."
-    <div className="fullscreen-container" >
-      <img 
-        src={montagne}
-        alt="montagne  plein écran"
-        className={`fullscreen-image ${fadeOut ? 'fade-out' : ''}`}
-      />
-      <img 
-      src={nypoVec}
-      alt="nypo"
-      className="nypo-button"
-      onClick={handleClick}
-      />
-    </div>
+    <MainContainer 
+      backgroundImage={backgroundImage}
+      buttonImage={buttonImage}
+      siteOpen={siteOpen}
+      onOpenSite={handleOpenSite}
+    />
   );
-}
+};
 
 export default App;
-
