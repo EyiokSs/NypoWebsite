@@ -4,23 +4,21 @@ import nypoVec from './nypoVec.png';
 
 
 const App = () => {  
-  const [imageVisible, setImageVisible] = useState(true);
+  const [fadeOut, setFadeOut] = useState(false);
 
   const handleClick = () => {
-    setImageVisible(false);
+    setFadeOut(true);
   };
 
 
   return (
     // image de départ avec le bouton "nypo."
     <div className="fullscreen-container" >
-      {imageVisible && (
-        <img 
-          src={montagne}
-          alt="montagne plein écran"
-          className="fullscreen-image"
-        />
-      )}
+      <img 
+        src={montagne}
+        alt="montagne  plein écran"
+        className={`fullscreen-image ${fadeOut ? 'fade-out' : ''}`}
+      />
       <img 
       src={nypoVec}
       alt="nypo"
