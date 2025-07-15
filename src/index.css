@@ -7,7 +7,77 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Styles personnalisés pour l'animation d'aspiration */
+
+/* Animation d'aspiration personnalisée */
+@keyframes aspiration {
+    0% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(0.5) rotate(180deg);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(0) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Durée personnalisée pour les transitions */
+.duration-2000 {
+    transition-duration: 2000ms;
+}
+
+/* Style pour empêcher le défilement */
+.no-scroll {
+    overflow: hidden;
+}
+
+/* Effet de lueur pour le point d'aspiration */
+.aspiration-point {
+    transition: all 2s ease-in-out;
+}
+
+.aspiration-point.active {
+    box-shadow: 0 0 50px #ffffff, 0 0 100px #ffffff, 0 0 150px #ffffff;
+}
+
+/* Animation des particules */
+.particle {
+    animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Style pour le bouton nypo */
+.nypo-button {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    z-index: 10;
+    position: relative;
+}
+
+.nypo-button:hover:not(:disabled) {
+    transform: scale(1.05);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.nypo-button:active:not(:disabled) {
+    transform: scale(0.95);
+}
+
+/* Styles pour l'image plein écran */
+.fullscreen-image {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    transform-origin: center;
+}
+
+/* Container principal */
+.main-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
