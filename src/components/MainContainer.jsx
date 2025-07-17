@@ -8,11 +8,9 @@ const MainContainer = ({
   buttonImage, 
   siteOpen, 
   onOpenSite,
-  siteTitle,
-  siteDescription 
 }) => {
   return (
-    <div className="fullscreen-container">
+    <div className={`fullscreen-container ${siteOpen ? 'visible' : ''}`}>
       <FullscreenImage 
         src={backgroundImage.src}
         alt={backgroundImage.alt}
