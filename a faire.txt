@@ -1,0 +1,59 @@
+jour 1
+
+mise en place du projet >> ok
+
+voir pour github = vscode pour le site de nypo >> OK
+
+____________________________________________
+
+jour 2
+
+le bouton nypo ne s'affiche pas au dessus de l'image donc l'animation ne peut jamais être lancé >> OK
+
+voir ensuite pour l'animation du "nypo." vers le haut >> OK
+____________________________________________
+
+jour 3
+
+autoriser le défilement une fois que le site est ouvert >> OK
+
+ligne de photo/vidéos défillante dans différents sens >> OK
+
+______________________________________________
+
+jour 4
+
+comment vont être stocké les photos/vidéos ? >> OK (strapi +aws s3 à voir avec nypo >> OK aussi)
+_______________________________________________
+
+jour 5/6
+
+menu déroulant en haut à droite >> implémenter mais problèmes : pas de reset à la première frame lorsqu'on quitte le menu + pas de css lorsqu'il est ouvert
+
+se renseigner pour savoir comment je peux avoir les accès aux buckets aws s3 de nypo avec un autre compte que celui-créateur >> méthode simple
+______________________________________________
+
+
+continuer d'étudier le fonctionnement du site de bad studio (script pour faire fonctionner les vidéos à l'air bien complet)
+
+lorsqu'il clique sur une photo/vidéo = accès à une autre page qui donne plus d'info/contenu sur le shooting (voir badstudio pareil)
+
+redéfinir le site en components clair
+
+trouver quoi mettre sous les bandes défilantes de la page d'accueil
+
+
+faire la page photo/vidéo avec l'exemple de da de eyecandy
+
+faire la page contact
+
+
+
+admin mode pour qu'il puisse directement ajouté des photos/projets (avec strapi/aws s3 au dessus)
+
+faire une version full repsonsive
+
+
+
+
+
